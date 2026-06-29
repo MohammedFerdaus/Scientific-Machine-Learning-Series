@@ -15,7 +15,7 @@ function test_numerical(omega, x0, v0, dt, num_steps)
     times, positions, velocities = run_simulation(x0, v0, omega, dt, num_steps)
     (max_error, rms_error) = compute_errors(positions, times, x0, v0, omega)
     
-    println("Numerical Results")
+    println("Numerical Results") 
     println("Maximum Absolute Error (Max Error): ", max_error)
     println("Root Mean Square Error (RMS Error): ", rms_error)
     
