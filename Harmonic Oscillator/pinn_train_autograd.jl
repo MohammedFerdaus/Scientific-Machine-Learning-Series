@@ -13,7 +13,7 @@ function wrap_params(tape, params)
         tracked_weights = Matrix{TrackedValue}(undef, size(weights))
         for i in eachindex(weights)
             tracked_weights[i] = track_param(tape, weights[i])
-        end
+        end 
         
         tracked_biases = Vector{TrackedValue}(undef, length(biases))
         for i in eachindex(biases)
