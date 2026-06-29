@@ -14,7 +14,7 @@ function ic_residual(params, time_span)
     velocity_residual = du_fn(0.0, params) / time_span
     return (position_residual, velocity_residual)
 end
-
+ 
 function compute_loss(params, collocation_points, omega, time_span, ic_weight)
     physics_loss = mean(t -> physics_residual(t, params, omega, time_span)^2, collocation_points)  
     (position_residual, velocity_residual) = ic_residual(params, time_span)
