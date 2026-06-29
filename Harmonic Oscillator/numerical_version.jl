@@ -6,7 +6,7 @@ function build_system_matrix(omega)
 end
 
 function oscillator_deriv(state, system_matrix)
-    return system_matrix * state  # was system_matrixv
+    return system_matrix * state  # was system_matrixv 
 end
 
 function rk4_step(state, system_matrix, dt)
