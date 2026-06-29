@@ -9,7 +9,7 @@ function init_params(layer_sizes, random_seed)
 
     for layer_index in 1:num_layers
         fan_in = layer_sizes[layer_index]
-        fan_out = layer_sizes[layer_index + 1]
+        fan_out = layer_sizes[layer_index + 1] 
         glorot_scale = sqrt(2.0 / (fan_in + fan_out))
         weights = glorot_scale * randn(fan_out, fan_in)
         biases = zeros(fan_out)
